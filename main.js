@@ -56,7 +56,7 @@ const namesData = {
  * @param Object[] dtoIn 
  * @returns Object
  */
-function generateEmployeeData(dtoIn) {
+export function generateEmployeeData(dtoIn) {
   const count = dtoIn.count;
   const minAge = dtoIn.age.min;
   const maxAge = dtoIn.age.max;
@@ -114,7 +114,7 @@ function generateEmployeeData(dtoIn) {
  * @param Object[] employees 
  * @returns Object
  */
-function getEmployeeStatistics(employees) {
+export function getEmployeeStatistics(employees) {
   const ages = employees.map(e => calculateAge(new Date(e.dateOfBirth)));
   const workloads = employees.map(e => e.workload);
 
